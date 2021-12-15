@@ -19,7 +19,7 @@ credentials = service_account.Credentials.from_service_account_info(
 conn = connect(credentials=credentials)
 
 
-@st.cache(ttl=600)
+# @st.cache(ttl=600)
 def run_query(query):
     rows = conn.execute(query, headers=1)
     return rows
